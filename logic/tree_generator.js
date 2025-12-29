@@ -1,12 +1,13 @@
-function generateGameTree(gameLogic) {
+function generateGameTree(gameLogic, maxDepth = 8) {
     const root = gameLogic.getInitialState();
+    root.depth = 0;
     const queue = [root];
     const discovered = new Map();
     discovered.set(root.id, root);
 
     while (queue.length > 0) {
         const current = queue.shift();
-        if (gameLogic.isTerminal(current)) {
+        if (gameLogic.isTerminal(current) || current.depth >= maxDepth) {
             current.isTerminal = true;
             current.winner = gameLogic.getWinner(current);
             continue;
@@ -14,11 +15,14 @@ function generateGameTree(gameLogic) {
         const moves = gameLogic.getPossibleMoves(current);
         for (const move of moves) {
             const nextState = gameLogic.getNextState(current, move);
+            nextState.depth = current.depth + 1;
             let child = discovered.get(nextState.id);
             if (!child) {
                 child = nextState;
                 discovered.set(child.id, child);
-                queue.push(child);
+                if (child.depth < maxDepth) {
+                    queue.push(child);
+                }
             }
             current.moves.push(move);
             current.children.push(child);
@@ -51,8 +55,8 @@ function generateGameTree(gameLogic) {
     const levelCounts = {};
     function assignCoords(node, depth) {
         levelCounts[depth] = (levelCounts[depth] || 0) + 1;
-        node.x = levelCounts[depth] * 80;
-        node.y = depth * 100;
+        node.x = levelCounts[depth] * 120;
+        node.y = depth * 80;
         node.children.forEach(child => assignCoords(child, depth + 1));
     }
     assignCoords(root, 0);

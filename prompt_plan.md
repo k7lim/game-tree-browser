@@ -4,7 +4,7 @@ This plan outlines the implementation of the **Game Tree Browser** project. It i
 
 ## 1.0 Project Scaffolding and Setup
 
-**[AI WORK BLOCK]** Started [ ] Finished [ ]
+**[AI WORK BLOCK]** Started [x] Finished [x]
 
   * **PROMPT ID:** 1.1
   * **GOAL:** Create the complete directory structure and all necessary empty files for the project. Populate `index.html` with the basic structure and `style.css` with placeholder styles.
@@ -48,7 +48,7 @@ Based on the specification, create the full file and directory structure for the
 
 ## 2.0 Core Data Models
 
-**[AI WORK BLOCK]** Started [ ] Finished [ ]
+**[AI WORK BLOCK]** Started [x] Finished [x]
 
   * **PROMPT ID:** 2.1
   * **GOAL:** Implement the core data structures, `State` and `Move`, as JavaScript classes.
@@ -77,7 +77,7 @@ Using the confirmed vocabulary (`State`, `Move`), implement the data models as J
 
 ## 3.0 Game Logic Modules (Nim & Tic-Tac-Toe)
 
-**[AI WORK BLOCK]** Started [ ] Finished [ ]
+**[AI WORK BLOCK]** Started [x] Finished [x]
 
   * **PROMPT ID:** 3.1
   * **GOAL:** Implement the complete game logic for both `Nim` and `TicTacToe`. This is pure logic with no rendering or tree-building code.
@@ -115,7 +115,7 @@ Implement the game logic for Nim and Tic-Tac-Toe in their respective files. Each
 
 ## 4.0 Game Tree Generation and Analysis
 
-**[AI WORK BLOCK]** Started [ ] Finished [ ]
+**[AI WORK BLOCK]** Started [x] Finished [x]
 
   * **PROMPT ID:** 4.1
   * **GOAL:** Implement the logic to generate a complete `GameTree` from a given game logic module and then analyze it to determine the win/loss `Odds` for every `State`.
@@ -161,7 +161,7 @@ In `logic/tree_generator.js`, implement the `generateGameTree` function. This fu
 
 ## 5.0 Visualization and Interaction
 
-**[AI WORK BLOCK]** Started [ ] Finished [ ]
+**[AI WORK BLOCK]** Started [x] Finished [x]
 
   * **PROMPT ID:** 5.1
   * **GOAL:** Implement the p5.js sketch to handle rendering the `GameTree` and all user interactions (game selection, panning, zooming).

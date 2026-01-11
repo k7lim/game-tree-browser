@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#controls {
+    margin: 10px;
+}
+
+button {
+    padding: 8px 12px;
+    margin-right: 5px;
+    cursor: pointer;
+}
